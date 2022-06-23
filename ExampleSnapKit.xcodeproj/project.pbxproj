@@ -13,9 +13,13 @@
 		BD3412542864EC68001001D6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD3412522864EC68001001D6 /* Main.storyboard */; };
 		BD3412562864EC6A001001D6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD3412552864EC6A001001D6 /* Assets.xcassets */; };
 		BD3412592864EC6A001001D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD3412572864EC6A001001D6 /* LaunchScreen.storyboard */; };
+		E245D2C068B0FECC4C239082 /* Pods_ExampleSnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD0C4D8318597BDA179DACDC /* Pods_ExampleSnapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17A0CD682FD5B89AE52B51DC /* Pods-ExampleSnapKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleSnapKit.debug.xcconfig"; path = "Target Support Files/Pods-ExampleSnapKit/Pods-ExampleSnapKit.debug.xcconfig"; sourceTree = "<group>"; };
+		AD0C4D8318597BDA179DACDC /* Pods_ExampleSnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExampleSnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B555C7C7632EB3C488E17C76 /* Pods-ExampleSnapKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExampleSnapKit.release.xcconfig"; path = "Target Support Files/Pods-ExampleSnapKit/Pods-ExampleSnapKit.release.xcconfig"; sourceTree = "<group>"; };
 		BD3412492864EC68001001D6 /* ExampleSnapKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExampleSnapKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD34124C2864EC68001001D6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD34124E2864EC68001001D6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E245D2C068B0FECC4C239082 /* Pods_ExampleSnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B147C542454EEF1F262374A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17A0CD682FD5B89AE52B51DC /* Pods-ExampleSnapKit.debug.xcconfig */,
+				B555C7C7632EB3C488E17C76 /* Pods-ExampleSnapKit.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8C765AF963B8B13F78F4E2B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD0C4D8318597BDA179DACDC /* Pods_ExampleSnapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BD3412402864EC68001001D6 = {
 			isa = PBXGroup;
 			children = (
 				BD34124B2864EC68001001D6 /* ExampleSnapKit */,
 				BD34124A2864EC68001001D6 /* Products */,
+				0B147C542454EEF1F262374A /* Pods */,
+				8C765AF963B8B13F78F4E2B6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD34125D2864EC6A001001D6 /* Build configuration list for PBXNativeTarget "ExampleSnapKit" */;
 			buildPhases = (
+				C9ED41777F27B9CF312002FF /* [CP] Check Pods Manifest.lock */,
 				BD3412452864EC68001001D6 /* Sources */,
 				BD3412462864EC68001001D6 /* Frameworks */,
 				BD3412472864EC68001001D6 /* Resources */,
+				41727509005ED70752FA4DE5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		41727509005ED70752FA4DE5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExampleSnapKit/Pods-ExampleSnapKit-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ExampleSnapKit/Pods-ExampleSnapKit-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ExampleSnapKit/Pods-ExampleSnapKit-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9ED41777F27B9CF312002FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ExampleSnapKit-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BD3412452864EC68001001D6 /* Sources */ = {
@@ -284,6 +353,7 @@
 		};
 		BD34125E2864EC6A001001D6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17A0CD682FD5B89AE52B51DC /* Pods-ExampleSnapKit.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -295,6 +365,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -306,12 +377,13 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		BD34125F2864EC6A001001D6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B555C7C7632EB3C488E17C76 /* Pods-ExampleSnapKit.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -323,6 +395,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -334,7 +407,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
