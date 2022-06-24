@@ -9,7 +9,13 @@ import SnapKit
 import UIKit
 
 class ViewController: UIViewController {
-    
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        someFunc()
+        
+    }
+
     func someFunc() {
         let button = UIButton()
         button.backgroundColor = .systemGray
@@ -23,13 +29,5 @@ class ViewController: UIViewController {
             make.top.equalToSuperview().inset(100)
         }
     }
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        someFunc()
-        
-    }
-
-
 }
 
